@@ -1,0 +1,24 @@
+logging:
+  level:
+    org.springframework: ERROR
+    com.mkyong: DEBUG
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: hystrix.stream
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        password: inam
+        url: jdbc:postgresql://localhost:5432/Student
+        username: postgres
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+    main:
+        banner-mode: 'off'
+    profiles:
+        active: dev
+
