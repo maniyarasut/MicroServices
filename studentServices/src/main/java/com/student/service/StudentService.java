@@ -12,6 +12,7 @@ import com.student.repo.StudentRepository;
 
 @Service
 public class StudentService {
+	
 	@Autowired
 	StudentRepository studentRepository;
 

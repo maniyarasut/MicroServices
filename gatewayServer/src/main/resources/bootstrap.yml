@@ -7,7 +7,7 @@ zuul:
   routes:
     users:
       path: /student/**
-      serviceId: com.student.services
+      serviceId: com.student.service
 
 
 eureka:

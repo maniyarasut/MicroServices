@@ -18,8 +18,9 @@ public class StudentAddress {
 	@Column(name="id")
 	private int id;
 	
+	
 	@OneToOne
-	@JoinColumn(name = "studentid",nullable=false)
+	@JoinColumn(name = "studentid",referencedColumnName = "id",nullable=false)
 	private Student student;
 	
 	@Column(name="streetname")
