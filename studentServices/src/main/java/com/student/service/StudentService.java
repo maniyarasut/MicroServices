@@ -37,8 +37,14 @@ public class StudentService {
 		s1.setName(student.getName());
 		s1.setEmail(student.getEmail());
 		s1.setDateOfBirth(student.getDateOfBirth());
+		s1.setAddress(student.getAddress());
 		studentRepository.save(s1);
 		return s1.getName()+" inserted";
+	}
+
+	public String deleteStudent(int id) {
+		studentRepository.deleteById(id);
+		return "Success";
 	}
 
 }

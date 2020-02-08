@@ -28,8 +28,8 @@ public class StudentAddress implements Serializable {
 	@Column(name="streetname")
 	private String streetName;
 	
-	@Column(name="City")
-	private String City;
+	@Column(name="city")
+	private String city;
 
 	@Column(name="country")
 	private String country;
@@ -50,10 +50,10 @@ public class StudentAddress implements Serializable {
 		this.streetName = streetName;
 	}
 	public String getCity() {
-		return City;
+		return city;
 	}
 	public void setCity(String city) {
-		City = city;
+		this.city = city;
 	}
 	public String getCountry() {
 		return country;
