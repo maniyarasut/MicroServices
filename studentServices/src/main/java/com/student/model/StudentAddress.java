@@ -1,27 +1,29 @@
 package com.student.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="studentaddress")
-public class StudentAddress {
+public class StudentAddress implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4989194582956340146L;
+
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO,generator="address_seq")
 	@Column(name="id")
 	private int id;
 	
-	
-	@OneToOne
-	@JoinColumn(name = "studentid",referencedColumnName = "id",nullable=false)
-	private Student student;
 	
 	@Column(name="streetname")
 	private String streetName;
@@ -65,13 +67,6 @@ public class StudentAddress {
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
-	public Student getStudentId() {
-		return student;
-	}
-	public void setStudentId(Student student) {
-		this.student = student;
-	}
-	
-	
+
 
 }
