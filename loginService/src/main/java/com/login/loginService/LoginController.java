@@ -12,18 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/pauth")
 public class LoginController {
 
 	@Autowired
 	LoginService service;
 	
-	@PostMapping("/get}")
-	public Boolean validateLogin( @Valid @RequestBody LoginDto login) {
-		return service.validateLogin(login);		
-	}
-	
-	@PostMapping
+
+	@PostMapping("/signup")
 	public String createLogin( @Valid @RequestBody LoginDto login) {
 		return service.createLogin(login);
 	}
@@ -32,4 +28,11 @@ public class LoginController {
 	public String updateLogin(@RequestBody LoginModel login) {
 		return service.upDateLogin(login);
 	}
+	
+	@GetMapping
+	public String getAll()
+	{
+		return "Hello:):)";
+	}
 }
+
