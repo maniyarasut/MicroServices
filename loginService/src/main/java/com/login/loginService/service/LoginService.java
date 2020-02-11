@@ -1,4 +1,4 @@
-package com.login.loginService;
+package com.login.loginService.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,6 +14,10 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.login.loginService.models.LoginDto;
+import com.login.loginService.models.LoginModel;
+import com.login.loginService.repo.LoginRepo;
 
 @Service
 public class LoginService {

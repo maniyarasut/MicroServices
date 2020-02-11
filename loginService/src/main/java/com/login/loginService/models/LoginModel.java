@@ -1,4 +1,4 @@
-package com.login.loginService;
+package com.login.loginService.models;
 
 import java.io.Serializable;
 import java.util.Date;

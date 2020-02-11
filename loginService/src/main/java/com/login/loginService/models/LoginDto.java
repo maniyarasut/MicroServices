@@ -1,4 +1,4 @@
-package com.login.loginService;
+package com.login.loginService.models;
 
 import javax.validation.constraints.NotBlank;
 
